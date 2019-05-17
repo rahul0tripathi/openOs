@@ -1,0 +1,52 @@
+ 
+<a id="trigger" class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+  <div id="modal1" class="modal"  draggable="true" >
+    <nav class="toolbar">
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right ">
+        <li id="fullscreen"><i class="material-icons">remove</i></li>
+        <li class="fscreen"><i class="material-icons">fullscreen</i></li>
+        <li><i class=" modal-close  material-icons">clear</i></li>
+      </ul>
+    </div>
+  </nav>
+    <div class="modal-content">
+   <div >
+     <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    </div>
+  </div>
+       
+ 
+ <!-- fulscreen window of app -->
+<div class="col s12" style="width:100%; display: none;" id="dummyappf">
+  <nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="right ">
+        <li id="fullscreen"><i class="material-icons">remove</i></li>
+        <li class="fscreen"><i class="material-icons">fullscreen</i></li>
+        <li><i class="close material-icons">clear</i></li>
+      </ul>
+    </div>
+  </nav>
+  <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+  </div>
+
+<script type="text/javascript">
+  $('.modal').modal();
+    $('.modal').draggable();
+  $(".fscreen").click(function(){
+$("#desktop").hide();
+$("#dummyappf").show();
+$('.modal').hide();
+$('#trigger').hide();
+  });
+  //close event of the app 
+  $(".close").click(function(){
+$('#dummyappf').hide();
+$('#desktop').show();
+$('#appframe').html('');
+  });
+</script>

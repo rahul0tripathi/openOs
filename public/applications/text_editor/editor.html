@@ -1,0 +1,102 @@
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+<link rel="stylesheet" href="/applications/text_editor/style.css">
+<link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+<div id="editor_window_small" class="modal" draggable="true" style="backdrop-filter: blur(2px); height: 100%;">
+  <div class="navbar-fixed">
+    <nav class="toolbar" style="position: fixed;">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo" style="font-size: 20px; margin-top:0px !important;">Editor</a>
+        <ul id="nav-mobile" class="right ">
+          <li id="fullscreen">
+            <i class="material-icons">remove</i>
+          </li>
+          <li class="fscreen">
+            <i class="material-icons">fullscreen</i>
+          </li>
+          <li>
+            <i class=" modal-close  material-icons">clear</i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="spinner"></div>
+  <div id="editor_small" style="display:none;">
+    <p>Hello World!</p>
+    <p>Some initial
+      <strong>bold</strong> text</p>
+    <p>
+      <br>
+    </p>
+  </div>
+
+</div>
+<div style="width:100vw; display: none; height:100vh; background-color:white; margin-bottom: 0px;" id="editor_window_big">
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">
+          <h6>Editor</h6>
+        </a>
+        <ul id="nav-mobile" class="right ">
+
+          <li id="fullscreen">
+            <i class="material-icons">remove</i>
+          </li>
+          <li>
+            <i class="close material-icons">clear</i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="editor_big" style="height: height:100vh; background-color: white;">
+  </div>
+</div>
+<script type="text/javascript">
+  $.getScript("https://cdn.quilljs.com/1.3.6/quill.js", function () {
+    $("#editor_small").show();
+    $(".spinner").hide();
+    new Quill('#editor_small', {
+      theme: 'snow'
+    });
+
+    function editor() {
+      new Quill('#editor_big', {
+        theme: 'snow'
+      });
+    }
+    $(".fscreen").click(function () {
+      var previous_result = $("#editor_small").html();
+      $("#desktop").css('filter', 'blur(0px)');
+      $("#desktop").hide();
+      $("#editor_window_small").modal('close');
+      $("#editor_big").append(previous_result);
+      editor();
+      $('html').css('background-color', 'black');
+      $("#editor_window_big").show();
+      $('#trigger').hide();
+    });
+
+  });
+  $('.modal').modal({
+    dismissible: false
+  });
+  $('.modal').draggable();
+  $("#editor_window_small").modal('open');
+  $("#desktop").css('filter', 'blur(5px)');
+  $('.modal-close').click(function () {
+    $("#desktop").css('filter', 'blur(0px)');
+  });
+
+
+  //close event of the app 
+  $(".close").click(function () {
+    $('html').css('background-color', 'rgba(0, 0, 0, 1)');
+    $('#editor_window_big').hide();
+
+    $('#desktop').show();
+    $('#appframe').html('');
+  });
+</script>

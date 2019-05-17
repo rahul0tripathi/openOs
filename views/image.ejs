@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.slim.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+  <title></title>
+  <style type="text/css">
+  footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+.Dock {
+  background-color: rgba(235,235,235,0.7);
+  padding: 1rem;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.25);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, var(--icon));
+  grid-gap: 1rem;
+  
+}
+.Icon {
+  height: var(--icon);
+  width: var(--icon);
+  display: grid;
+  align-content: center;
+  grid-template-columns: 1;
+  grid-template-rows: 1;
+}
+
+.Icon img {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  width: 100%;
+  object-fit: cover;
+}
+    html {
+    /*   background: #000046;
+      fallback for old browsers 
+      background: -webkit-linear-gradient(to right, #000046, #1cb5e0);
+      /* Chrome 10-25, Safari 5.1-6 
+      background: linear-gradient(to right, #000046, #1cb5e0);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-image: url('/images/wall.png');
+      background-size: 100vw 100vh;
+    }
+
+    #wallpaper {
+      height: 640px;
+      width: 70%;
+      margin-top: 5%;
+      margin-left: 15%;
+      position: absolute;
+    }
+
+    nav {
+      height: 30px;
+      line-height: 30px;
+      background-color: #1d1c1c;
+    }
+
+    nav i.material-icons {
+      display: block;
+      line-height: 30px;
+    }
+
+    nav ul li {
+      margin-left: 15px;
+    }
+
+    .toolbar {
+
+      height: 25px;
+      line-height: 25px;
+
+    }
+
+    .toolbar i.material-icons {
+      display: block;
+      line-height: 25px;
+    }
+
+    a {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="col s12" style="width:auto;" id="desktop">
+
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo"></a>
+        <ul id="task_list">
+        </ul>
+        <ul id="nav-mobile" class="right ">
+          <li id="fullscreen">
+            <i id="disc" style="vertical-align: middle; margin-top: 0px; cursor: pointer;" class="material-icons">fullscreen</i>
+          </li>
+          <li>
+            <i class="material-icons">person</i>
+          </li>
+          <li>
+            <i class="material-icons">power_settings_new</i>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="col s12">
+      <p class="application"></p>
+    </div>
+    <footer>
+  <div class="Dock">
+  </div>
+</footer>
+  </div>
+
+
+  <div id="appframe"></div>
+
+  <script type="text/javascript" src="/js/core.js"></script>
+</body>
+
+</html>

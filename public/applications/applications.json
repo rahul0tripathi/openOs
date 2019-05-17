@@ -1,0 +1,15 @@
+[{
+		"name": "Terminal",
+		"icon": "/applications/terminal/bash.svg",
+		"entry_file": "/public/applications/terminal/Terminal.html",
+		"server_file": "/public/applications/terminal/Terminal.js",
+		"npm_install": 1
+	},
+	{
+		"name": "Editor",
+		"icon": "/applications/text_editor/logo.svg",
+		"entry_file": "/public/applications/text_editor/editor.html",
+		"npm_install": 1
+	}
+
+]
