@@ -18,7 +18,7 @@ Terminal Is A GUI For bash shell and utilizes nodejs libraries [shelljs,node-pty
 
  - Addons
  **Terminal-Editor**
- Terminal Editor Can Be Used To Edit Files On Server And Also Supports Basic Syntax Hilighting.
+ >Terminal Editor Can Be Used To Edit Files On Server And Also Supports Basic Syntax Hilighting.
  `$ edit absolute/path/to/the/file.js`
  
 
@@ -26,7 +26,7 @@ Terminal Is A GUI For bash shell and utilizes nodejs libraries [shelljs,node-pty
 Text-Editor Is A Basic Javascript Based Editor [Quill](https://quilljs.com/).
 
  - installation
- Does Not Require Any Installation
+ >Does Not Require Any Installation
 
 ## Author
 Developed And Maintained By [Rahul Tripathi](https://github.com/rahultripathidev)
