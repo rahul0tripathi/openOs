@@ -1,6 +1,7 @@
 ## openOs v::0.1.1(Beta)
 Open Os Is A Web Based GUI For Servers With support for basic applications like Terminal and Text Editor. It is powered By Nodejs  :)
 > View Working Demo [openOs-Web](http://ec2-54-154-196-129.eu-west-1.compute.amazonaws.com/)
+`* Server Is Currently Down Because I Don't Have The Money To Run Them And AWS Sucks :)`
 ## Install Nodechat
 Install Core Os
     `~ $ git clone https://github.com/rahultripathidev/openOs.git`
