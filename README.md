@@ -32,5 +32,4 @@ Text-Editor Is A Basic Javascript Based Editor [Quill](https://quilljs.com/).
 ## Author
 Developed And Maintained By [Rahul Tripathi](https://github.com/rahultripathidev)
 
- - This Version is Currently Under Development and Might Be Buggy :( . Please Show Us Some :heart: 
-![# Files](https://raw.githubusercontent.com/rahultripathidev/nodechat/master/ReadMeContent/noonehumor.jpg)
+
